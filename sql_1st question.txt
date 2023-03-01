@@ -1,0 +1,274 @@
+Question 1 - 
+
+Write the queries for the following tasks - 
+1. 
+create database Employee;
+use Employee;
+
+2. create table employee_details
+  2  (
+  3  emp_id number(4),
+  4  emp_name varchar2(20),
+  5  job_name varchar2(20),
+  6  manager_id number(7),
+  7  hire_date date,
+  8  salary number(7),
+  9  dep_id number(5)
+ 10  );
+
+Table created.
+
+
+desc employee_details
+
+
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ EMP_ID                                             NUMBER(4)
+ EMP_NAME                                           VARCHAR2(20)
+ JOB_NAME                                           VARCHAR2(20)
+ MANAGER_ID                                         NUMBER(7)
+ HIRE_DATE                                          DATE
+ SALARY                                             NUMBER(7)
+ DEP_ID                                             NUMBER(5)
+
+3.
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1201
+Enter value for b: 'hani'
+Enter value for c: 'manager'
+Enter value for d: 0
+Enter value for e: '01-jan-20'
+Enter value for f: 80000
+Enter value for g: 1
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1201,'hani','manager',0,'01-dec-20',80000,1)
+
+
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1202
+Enter value for b: 'kavya'
+Enter value for c: 'developer'
+Enter value for d: 1
+Enter value for e: '02-feb-20'
+Enter value for f: 60000
+Enter value for g: 1
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1202,'kavya','developer',1,'02-feb-20',60000,1)
+
+1 row created.
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1203
+Enter value for b: 'satya'
+Enter value for c: 'developer'
+Enter value for d: 1
+Enter value for e: '03-mar-20'
+Enter value for f: 60000
+Enter value for g: 2
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1203,'satya','developer',1,'03-mar-20',60000,2)
+
+1 row created.
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1204
+Enter value for b: 'renuka'
+Enter value for c: 'designer'
+Enter value for d: 1
+Enter value for e: '04-apr-20'
+Enter value for f: 75000
+Enter value for g: 2
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1204,'renuka','designer',1,'04-apr-20',75000,2)
+
+1 row created.
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1205
+Enter value for b: 'sunitha'
+Enter value for c: 'anaylst'
+Enter value for d: 2
+Enter value for e: '05-may-20'
+Enter value for f: 55000
+Enter value for g: 3
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1205,'sunitha','anaylst',2,'05-may-20',55000,3)
+
+1 row created.
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1206
+Enter value for b: 'manaswitha'
+Enter value for c: 'analyst'
+Enter value for d: 2
+Enter value for e: '06-jun-20'
+Enter value for f: 55000
+Enter value for g: 3
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1206,'manaswitha','analyst',2,'06-jun-20',55000,3)
+
+1 row created.
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1207
+Enter value for b: 'aishu'
+Enter value for c: 'developer'
+Enter value for d: 1
+Enter value for e: '07-jul-20'
+Enter value for f: 60000
+Enter value for g: 1
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1207,'aishu','developer',1,'07-jul-20',60000,1)
+
+1 row created.
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1208
+Enter value for b: 'lekya'
+Enter value for c: 'designer'
+Enter value for d: 2
+Enter value for e: '08-aug-20'
+Enter value for f: 55000
+Enter value for g: 2
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1208,'lekya','designer',2,'08-aug-20',55000,2)
+
+1 row created.
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1209
+Enter value for b: 'sanju'
+Enter value for c: 'developer'
+Enter value for d: 1
+Enter value for e: '09-sep-20'
+Enter value for f: 65000
+Enter value for g: 1
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1209,'sanju','developer',1,'09-sep-20',65000,1)
+
+1 row created.
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1210
+Enter value for b: 'sai'
+Enter value for c: 'analyst'
+Enter value for d: 2
+Enter value for e: '10-oct-20'
+Enter value for f: 60000
+Enter value for g: 2
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1210,'sai','analyst',2,'10-oct-20',60000,2)
+
+1 row created.
+
+
+SQL> insert into employee_details values(&a,&b,&c,&d,&e,&f,&g);
+Enter value for a: 1211
+Enter value for b: 'vijay'
+Enter value for c: 'analyst'
+Enter value for d: 2
+Enter value for e: '11-nov-20'
+Enter value for f: 55000
+Enter value for g: 3
+old   1: insert into employee_details values(&a,&b,&c,&d,&e,&f,&g)
+new   1: insert into employee_details values(1211,'vijay','analyst',2,'11-nov-20',55000,3)
+
+1 row created.
+
+4.
+select salary from employee_details;
+ SALARY
+----------
+      6000
+     70000
+      6290
+      6220
+      7000
+      7000
+     10000
+      9000
+     10000
+     10000
+
+10 rows selected.
+
+5.
+SQL> select distinct job_name from employee_details;
+
+JOB_NAME
+--------------------
+anaylst
+developer
+manager
+analyst
+designer
+
+6.
+SQL> update employee_details set salary=70000 where emp_name='raj';
+
+1 row updated.
+
+
+SQL> select * from employee_details;
+
+    EMP_ID EMP_NAME             JOB_NAME             MANAGER_ID HIRE_DATE
+---------- -------------------- -------------------- ---------- ---------
+    SALARY     DEP_ID
+---------- ----------
+       1201 hani                 manager                       0 01-JAN-20
+     80000          1
+
+       1202 kavya                 developer                     1 02-FEB-20
+     60000          1
+
+       1203 satya               developer                     1 03-MAR-20
+     60000          2
+
+
+    EMP_ID EMP_NAME             JOB_NAME             MANAGER_ID HIRE_DATE
+---------- -------------------- -------------------- ---------- ---------
+    SALARY     DEP_ID
+---------- ----------
+       1204 renuka              designer                   1    04-APR-20
+     75000          2
+
+       1205 sunitha             anaylst                    2    05-MAY-20
+     55000          3
+
+       1206 manaswitha          analyst                    2     06-JUN-20
+     55000          3
+
+
+    EMP_ID EMP_NAME             JOB_NAME             MANAGER_ID HIRE_DATE
+---------- -------------------- -------------------- ---------- ---------
+    SALARY     DEP_ID
+---------- ----------
+       1207 aishu                  developer                     1  07-JUL-20
+     60000           1
+
+       1208 lekya                  designer                      2  08-AUG-20
+     55000           2
+
+       1209 sanju                 developer                      1  09-SEP-20
+     652000          1
+
+
+    EMP_ID EMP_NAME             JOB_NAME             MANAGER_ID HIRE_DATE
+---------- -------------------- -------------------- ---------- ---------
+    SALARY     DEP_ID
+---------- ----------
+       1210 sai               analyst                       2 10-OCT-20
+     60000          2
+
+       1211 vijay             analyst                       2 11-NOV-20
+     70000          3
+
+
+11 rows selected.
+
+
+
+
+
